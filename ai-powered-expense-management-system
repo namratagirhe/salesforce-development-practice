@@ -1,0 +1,222 @@
+# 💰 AI-Powered Expense Management System
+
+## 📌 Project Overview
+
+AI-Powered Expense Management System is a Salesforce Administrator project designed to automate employee expense claim management.
+
+The system allows employees to submit expense claims, upload receipts, track approval status, and receive automated notifications. Managers can review, approve, or reject claims through a streamlined approval process.
+
+---
+
+## 🚀 Features
+
+✅ Expense Claim Management
+
+✅ Expense Item Tracking
+
+✅ Receipt File Upload
+
+✅ Validation Rules
+
+✅ Record-Triggered Flow Automation
+
+✅ Approval Process
+
+✅ AI-Based Risk Assessment
+
+✅ Reports & Dashboards
+
+✅ Security & Sharing Model
+
+---
+
+## 🏗️ Objects & Relationships
+
+### Expense_Claim__c (Parent)
+
+Fields:
+- Claim Number
+- Employee Name
+- Total Amount
+- Status
+- Submission Date
+
+### Expense_Item__c (Child)
+
+Fields:
+- Expense Type
+- Amount
+- Description
+- Receipt Upload
+
+Relationship:
+- Master-Detail Relationship with Expense Claim
+
+---
+
+## ✅ Validation Rules
+
+### Amount Validation
+
+```
+Amount__c <= 0
+```
+
+Error Message:
+
+```
+Amount must be greater than zero.
+```
+
+### Description Validation
+
+```
+ISBLANK(Description__c)
+```
+
+Error Message:
+
+```
+Description is required.
+```
+
+---
+
+## ⚡ Flow Automation
+
+### Expense Submission Flow
+
+- Employee submits expense claim
+- Manager receives email notification
+- Status changes to Submitted
+
+### High Expense Alert Flow
+
+If Amount > ₹10,000
+
+- Alert generated
+- Manager notified automatically
+
+### Auto Approval Flow
+
+If Amount < ₹1,000
+
+- Automatically approved
+- Status updated to Approved
+
+---
+
+## 📋 Approval Process
+
+### Process Steps
+
+1. Employee submits expense claim
+2. Manager reviews claim
+3. Approve or Reject
+4. Employee receives notification
+5. Status updated automatically
+
+Approval Status:
+
+- Draft
+- Submitted
+- Approved
+- Rejected
+
+---
+
+## 🤖 AI Feature
+
+### Risk Level Formula Field
+
+```
+IF(
+Amount__c > 10000,
+"High Risk",
+"Low Risk"
+)
+```
+
+### AI Prediction
+
+- Einstein Prediction Builder
+- Predicts approval/rejection possibility
+- Identifies risky claims
+- Helps managers make decisions faster
+
+---
+
+## 📊 Reports & Dashboards
+
+### Reports
+
+- Expenses by Employee
+- Expenses by Category
+- Approved Claims
+- Rejected Claims
+- Monthly Expense Report
+
+### Dashboard Components
+
+- Total Expenses
+- Approval Rate
+- Monthly Trends
+- Top Spending Employees
+- High Risk Claims
+
+---
+
+## 🔒 Security Model
+
+### Organization-Wide Default
+
+Private
+
+### Roles
+
+- Employee
+- Manager
+- Finance Manager
+
+### Permission Sets
+
+- Expense User
+- Expense Manager
+
+---
+
+## 🛠 Salesforce Features Used
+
+- Custom Objects
+- Custom Fields
+- Master-Detail Relationship
+- Validation Rules
+- Formula Fields
+- Record Triggered Flows
+- Approval Process
+- Reports
+- Dashboards
+- Permission Sets
+- Role Hierarchy
+
+---
+
+## 👩‍💻 Developed By
+
+**Namrata Gajanan Girhe**
+
+Salesforce Administrator Learner
+
+Final Year ENTC Student
+
+📍 Maharashtra, India
+
+🔗 LinkedIn:
+www.linkedin.com/in/namrata-girhe-21577a352
+
+#Salesforce
+#SalesforceAdmin
+#CRM
+#OpenToWork
+#ExpenseManagement
+#SalesforceProject
